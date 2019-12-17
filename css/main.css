@@ -1,0 +1,202 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-weight: 300;
+    display: flex;
+    padding: 10px;
+    padding-left: 7%;
+}
+
+header span{
+    padding: 10px 15px;
+    transition: color 0.5s;
+}
+
+header span:hover{
+    color: #fd7e14;
+}
+
+#bigpicture{
+    background-image: url('../images/664394-rajpath.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+    line-height: 50px;
+    height: 600px;
+    color: white;
+}
+
+#bigpicture #titletext{
+    font-size: 40px;
+    font-weight: 700;   
+}
+
+#bigpicture #motto{
+    /* margin-top: 15px; */
+    font-size: 30px;
+}
+
+
+#bigpicture #mottobtn span{
+    /* font-weight: 300; */
+    color: white;
+    border-radius: 1024px;
+    background-color: #1b93b8;
+    padding: 10px 30px;
+}
+
+#aboutus{
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+}
+
+#aboutus #aboutusbg{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff7ef;
+    height: inherit;
+}
+
+#aboutus #aboutusbg #aboutuspicture{
+    width: 50%;
+    height: 50%;
+    background-image: url('../images/ncc_logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#aboutus #aboutustext{
+    margin-left: -60px;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#aboutus #aboutustext div span{
+    /* margin-top: 20px; */
+    color: white;
+    border-radius: 1024px;
+    background-color: #1b93b8;
+    padding: 10px 30px;
+}
+
+#events{
+    margin-top: 20px;
+}
+
+#events .eventsheader{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #fd7e14;
+}
+
+#events .allevents{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#events .allevents .eventcard{
+    width: 500px;
+    height: 400px;
+    background-image: url('../images/upcoming_event_1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.eventcard .eventdetailsborder{
+    border: 15px solid rgba(210, 215, 211, 0.5);
+    width: 50%;
+    height: 80%;
+}
+
+.eventcard .eventdetailsborder .eventdetails{
+    background-color: #454545;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.venuetimedate{
+    display: flex;
+}
+.venuetimedate .date{
+    padding: 5px 20px;
+    border-right: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 2; */
+}
+
+.venuetimedate .timevenue{
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    font-size: small;
+}
+
+.description{
+    padding: 10px;
+    font-size: small;
+}
+
+.eventbtn{
+    padding: 10px;
+}
+
+.eventbtn span{
+    padding: 10px 30px;
+    background-color: #fd7e14;
+    color: white;
+    border-bottom: 3px solid #fdcb9e;
+    font-size: small;
+}
+
+footer{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    padding: 30px;
+    padding-left: 40px;
+    background-color: #303030;
+    color: whitesmoke;
+}

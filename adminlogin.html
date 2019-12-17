@@ -1,0 +1,49 @@
+<!-- SESSION DETAILS -->
+
+<?php
+include('adminlogin.php'); // Includes Login Script
+
+if(isset($_SESSION['admin_user'])){
+    header("location: admin.html");
+}
+?>
+
+
+<!-- DOCTYPE HTML -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adminlogin.css">
+    <title>NCC NIT Jalandhar</title>
+</head>
+<body>
+
+    <header>
+        <span><a href="#">HOME </a></span>
+        <span><a href="#">ABOUT US</a></span>
+        <span><a href="#">TEAM</a></span>
+        <span><a href="#">GALLERY</a></span>
+        <span><a href="#">CONTACT</a></span>
+        <span><a href="#">CHECK HOURS</a></span>
+    </header>
+
+    <div id="logindetailscontainer">
+        <form action="adminlogin.php" method="POST">
+            <div id="logindetails">
+                <input type="email" name="adminemail" id="emailid" placeholder="Email" required>
+                <input type="password" name="adminpassword" id="password" placeholder="Password" required>
+                <input type="submit" name="submit" value="Log in">
+                <span><?php echo $error; ?></span>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <span>Copyright © 2019 All rights reserved | NIT Jalandhar | Created By Prashant and Aditya</span>
+    </footer>
+</body>
+</html>

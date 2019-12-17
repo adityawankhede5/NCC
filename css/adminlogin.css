@@ -1,0 +1,32 @@
+#logindetailscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#logindetails{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    height: 250px;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+input[type=email], input[type=password]{
+    padding: 10px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    width: 250px;
+}
+
+input[type=submit]{
+    padding: 10px 20px;
+    color: white;
+    background-color: #fd7e14;
+    border: 0px;
+    border-bottom: 3px solid #fdcb9e;
+}
