@@ -25,16 +25,16 @@ function eventForm(){
     console.log("Show event form");
     let formscontainer = document.getElementById("formscontainer");
     formscontainer.innerText='';
-    formscontainer.insertAdjacentHTML('beforeend', '<h1>Add Event</h1><form class="actualform" id="eventform" action="addevent.php" method="POST" enctype="multipart/form-data"></form>');
+    formscontainer.insertAdjacentHTML('beforeend', '<h1>Add Event</h1><form class="actualform" id="eventform" action="addevent.php" method="POST" enctype="multipart/form-data" ></form>');
     let form = document.getElementById("eventform");
     let elements = ["date | Date", "month | Month", "timefrom | Time from", "timeto | Time to", "venue | Venue", "brief | Brief"];
     let types = ["number", "month", "time", "time", "text", "text"];
 
     elements.forEach((el, i)=>{
-        form.insertAdjacentHTML('beforeend', `<div class="formelement"><label>${el.split(' | ')[1]}</label><input type="${types[i]}" name="${el.split(' | ')[0]}" ></input></div>`);
+        form.insertAdjacentHTML('beforeend', `<div class="formelement"><label>${el.split(' | ')[1]}</label><input type="${types[i]}" name="${el.split(' | ')[0]}" required></input></div>`);
     });
-    form.insertAdjacentHTML('beforeend', '<div class="formelement"><label>Description</label><textarea id="description" name="description"></textarea></div>');
-    form.insertAdjacentHTML('beforeend', '<div class="formelement"><label>Upload Images</label><input type="file" name="filename"></input></div>');
+    form.insertAdjacentHTML('beforeend', '<div class="formelement"><label>Description</label><textarea id="description" name="description" required></textarea></div>');
+    form.insertAdjacentHTML('beforeend', '<div class="formelement"><label>Upload Images</label><input type="file" name="filename" required></input></div>');
     form.insertAdjacentHTML('beforeend', '<div class="formelement"><input type="submit" value="Add" name="submit"></div>');
 }
 
