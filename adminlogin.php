@@ -10,8 +10,6 @@
         $mysqli = new mysqli("localhost", "root", "","test");
 
         // To protect MySQL injection for Security purpose
-        // $adminemail = stripslashes($adminemail);
-        // $adminpassword = stripslashes($adminpassword);
         $adminemail = mysqli_escape_string($mysqli, $adminemail);
         $adminpassword = mysqli_escape_string($mysqli, $adminpassword);
 

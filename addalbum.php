@@ -84,7 +84,7 @@
         
         $aname = $_POST['albumname'];
         $mysqli = new mysqli("localhost", "root", "","test");
-        $sql = "INSERT INTO albums (name, date, location) VALUES ('$aname', '$adate', '$albumdir')";
+        $sql = "INSERT INTO albums (name, date, location, imagecount) VALUES ('$aname', '$adate', '$albumdir', $afilescount)";
         $results = $mysqli->query($sql);
         
         if($results==true){

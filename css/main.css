@@ -111,7 +111,7 @@ header span:hover{
     margin-top: 20px;
 }
 
-#events .eventsheader{
+.subsectionheader{
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -199,4 +199,54 @@ footer{
     padding-left: 40px;
     background-color: #303030;
     color: whitesmoke;
+}
+
+#gallerycontainer{
+    margin-top: 30px;
+}
+
+#gallery{
+    display: flex;
+    height: 600px;
+}
+
+.gallerycolumn{
+    display: flex;
+    flex-direction: column;
+}
+
+#gallery-col-1, #gallery-col-3{
+    flex-grow: 1;
+    /* border: 2px solid black; */
+}
+
+#gallery-col-2{
+    flex-grow: 3;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+#gallery-col-2-row-1, #gallery-col-2-row-2{
+    display: flex;
+    /* border: 2px solid green; */
+    height: 50%;
+}
+
+.gallery-element{
+    margin: 3px;
+    background-image: url('../images/664394-rajpath.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gallery-col-1-row-1, #gallery-col-3-row-2, #gallery-col-2-row-1-col-1, #gallery-col-2-row-2-col-2{
+    flex-grow: 1;
+    /* border: 2px solid red; */
+}
+
+#gallery-col-1-row-2, #gallery-col-3-row-1, #gallery-col-2-row-1-col-2, #gallery-col-2-row-2-col-1{
+    flex-grow: 2;
+    /* border: 2px solid red; */
 }
