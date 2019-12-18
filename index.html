@@ -1,3 +1,7 @@
+<?php
+    include('index.php');
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,18 +46,31 @@
         <div class="eventsheader"><i>Upcoming events</i></div>
         <div class="allevents">
             <!-- EVENT CARD EVENT 1 -->
-            <div class="eventcard" id="event-NUMBER">
+            <?php
+                if($results->num_rows>0){
+                    while($row=$results->fetch_assoc()){
+                        $date = explode('-', $row['date'])[2];
+                        $month = $months[intval(explode('-', $row['date'])[1])];
+                        $beginat = $row['beginat'];
+                        $endat = $row['endat'];
+                        $venue = $row['venue'];
+                        $brief = $row['brief'];
+                        $description = $row['description'];
+                        $image = $row['image'];
+            ?>
+            <div class="eventcard" id="event-NUMBER" style="background-image: url(uploads/events/<?php echo $image; ?>)">
                 <div class="eventdetailsborder">
                     <div class="eventdetails">
                         <div class="venuetimedate">
-                            <div class="date"><span style="font-size: xx-large;font-weight: 700;">15</span><br><span>Jun</span></div>
+                            <div class="date"><span style="font-size: xx-large;font-weight: 700;"><?php echo $date; ?></span><br><span><?php echo $month; ?></span></div>
                             <div class="timevenue">
-                                <span class="time">12:00 AM - 12:30 AM</span>
-                                <span class="venue">MAIN GROUND</span>
+                                <span class="time"><?php echo $beginat; ?> - <?php echo $endat; ?> </span>
+                                <span class="venue"><?php echo $venue; ?></span>
                             </div>
                         </div>
                         <div class="description">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                            <?php echo $brief; ?><br>
+                            <?php echo $description; ?>
                         </div>
                         <div class="eventbtn">
                             <a href="#"><span>View Details</span></a>
@@ -61,6 +78,10 @@
                     </div>
                 </div>
             </div>
+            <?php            
+                    }
+                }
+            ?>
             <!-- EVENT CARD EVENT 2 -->
             <!-- <div class="eventcard" id="event-NUMBER">
                 <div class="eventdetailsborder">
