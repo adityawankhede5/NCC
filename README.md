@@ -8,7 +8,7 @@ CREATE TABLE admincred (
 );
 
 Admin email and password:
-INSERT INTO `admincred`(`email`, `password`) VALUES ('nccadmin@nitj.ac.in', 'adminpassword');
+INSERT INTO admincred (email, password) VALUES ('nccadmin@nitj.ac.in', 'adminpassword');
 
 Events table
 CREATE TABLE events (
